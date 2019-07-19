@@ -62,28 +62,28 @@ de desenvolvimento do projeto:
 
 -----------------------------------------------------------------------
 
-# cria uma imagem de disco com 100 (default) blocos/setores,
-# onde cada setor, possui 512 bytes (default) ou seja, o disco tem 50KB.
-# OBS: imagem está preenchida com zeros
+ cria uma imagem de disco com 100 (default) blocos/setores,
+ onde cada setor, possui 512 bytes (default) ou seja, o disco tem 50KB.
+ OBS: imagem está preenchida com zeros
 
 	$ make mydisk
 
-# roda o nasm em cima do arquivo boot1.asm (default),
-# gerando um binário de padrão flat, chamado boot1.bin
+ roda o nasm em cima do arquivo boot1.asm (default),
+ gerando um binário de padrão flat, chamado boot1.bin
 
 	$ make boot1
 
-# coloca o primeiro estágio do bootloader em formato binário no
-# primeiro setor da imagem de disco.
+ coloca o primeiro estágio do bootloader em formato binário no
+ primeiro setor da imagem de disco.
 
 	$ make write_boot1
 
-# roda o qemu, usando a sua imagem de disco.
+ roda o qemu, usando a sua imagem de disco.
 
 	$ make launchqemu
 
-# limpa a pasta do projeto, removendo arquivos gerados pelo 'make', como
-# binários e imagens de disco. Útil ao rodar de novo o projeto.
+ limpa a pasta do projeto, removendo arquivos gerados pelo 'make', como
+ binários e imagens de disco. Útil ao rodar de novo o projeto.
 
 	$ make clean
 
@@ -93,17 +93,17 @@ de desenvolvimento do projeto:
 Os seguintes comandos servem como auxílio para compreender exatamente
 o que o código está fazendo.
 
-# mostra um hexdump do disco na tela, para checar se o seu bootloader 
-# está ultrapassando os 512 bytes permitidos para um bootsector. Esse
-# comando é útil para entender melhor o que está acontecendo no disco,
-# principalmente a posição onde os programas estão na imagem.
+ mostra um hexdump do disco na tela, para checar se o seu bootloader 
+ está ultrapassando os 512 bytes permitidos para um bootsector. Esse
+ comando é útil para entender melhor o que está acontecendo no disco,
+ principalmente a posição onde os programas estão na imagem.
 
 	$ make hexdump
 
-# Roda o disassembler do nasm, transformando o código (à principio do
-# primeiro estágio do bootloader) binário em assembly e jogando o código
-# na tela. Pode ser útil ao tentar entender o que uma determinada macro
-# do nasm faz, ou como o nasm funciona em geral.
+ Roda o disassembler do nasm, transformando o código (à principio do
+ primeiro estágio do bootloader) binário em assembly e jogando o código
+ na tela. Pode ser útil ao tentar entender o que uma determinada macro
+ do nasm faz, ou como o nasm funciona em geral.
 
 	$ make disasm
 
@@ -112,8 +112,8 @@ o que o código está fazendo.
 
 E para conviniência...
 
-# Roda todo o projeto automaticamente, deixando mais rápido o processo
-# de desenvolvimento
+ Roda todo o projeto automaticamente, deixando mais rápido o processo
+ de desenvolvimento
 
 	$ make all
 
